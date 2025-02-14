@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gif_container_a">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW42dnRneDE1emFxcmlxc3Jlb3FkMTE4bzY1ZTEycmNsZDNrY3A1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pq5tRfjF4xEPdm5PHF/giphy.gif" alt="Cute GIF">
+        </div>
+        <h1>Do you love me?</h1>
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Yes of course!😍</button>
+            <button class="no-button" onclick="handleNoClick()">Haan ka love!😒</button>
+            <!--<button class="back-button" onclick="handleBackClick()">Go back..</button>-->
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHpsZG5oeTBnMHozZXczeTJwZDI1eXlqM2xyZW1odnpzNXV6aTZ0eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qUIm5wu6LAAog/giphy.gif" alt="Cute GIF">
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    const messages = [
+        "Ulbud!?",
+        "ya ladduk mu ko leya??",
+        "Are you positive?",
+        "Bebi please...",
+        "🥹🥹🥹",
+        "Ok fine, I will stop asking...",
+        "Just kidding, say yes please! ❤️"
+    ];
+    
+    let messageIndex = 0;
+    
+    function handleNoClick() {
+        const noButton = document.querySelector('.no-button');
+        const yesButton = document.querySelector('.yes-button');
+        noButton.textContent = messages[messageIndex];
+        messageIndex = (messageIndex + 1) % messages.length;
+        const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    }
+    
+    function handleYesClick() {
+        window.location.href = "yes_page.html";
+    }
+    
+    
+        
+    </script>

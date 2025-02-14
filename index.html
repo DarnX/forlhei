@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gif_container_a">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnV3a2cxcWF6Zm9ub3JzNjJhazd1ZnhjcXNhbHEyd2x6eDUwNndwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/19CU3F5v6fq4LawRGu/giphy.gif" alt="Cute GIF">
+        </div>
+        <h1>My love Lhei G. Pagurayan eyyy😘😍👌🤣...</h1>
+        
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Click to continue...😘</button>
+           <!-- <button class="no-button" onclick="handleNoClick()">No</button>--> 
+        </div>
+        <div class="gif_container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3V2ZGNxcGprYmN3dW83cmR2MzAydHRtbjlmazNxZnE2MXZjZHBkaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qRtwZkH3TaQrJuAUmp/giphy.gif" alt="Cute GIF">
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+const messages = [
+    "Are you sure?",
+    "Really sure??",
+    "Are you positive?",
+    "Pookie please...",
+    "Just think about it!",
+    "If you say no, I will be really sad...",
+    "I will be very sad...",
+    "I will be very very very sad...",
+    "Ok fine, I will stop asking...",
+    "Just kidding, say yes please! ❤️"
+];
+
+let messageIndex = 0;
+
+function handleNoClick() {
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
+    noButton.textContent = messages[messageIndex];
+    messageIndex = (messageIndex + 1) % messages.length;
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+}
+
+function handleYesClick() {
+    window.location.href = "indexb.html";
+}
+
+
+    
+</script>
